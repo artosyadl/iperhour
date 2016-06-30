@@ -1,0 +1,114 @@
+// Login Page
+//-----------------------------------------------------------------------------------
+
+.login-page
+  position: relative
+  height: 100%
+  .img-content
+    @extend %clear-fix
+    position: absolute
+    top: 0
+    right: 470px
+    bottom: 0
+    left: 0
+    box-sizing: border-box
+    padding: 30px
+    background: white url("../images/login/pic.jpg") no-repeat center / cover
+    .logo
+      display: inline-block
+      width: 140px
+      height: 30px
+      text-decoration: none
+      fill: white
+    .lang-select
+      @extend %clear-fix
+      display: inline-block
+      float: right
+      line-height: 36px
+      .name
+        display: inline-block
+        color: white
+        font: 14px / 36px $Helvetica-Regular
+      .icon
+        margin-right: 4px
+        margin-bottom: -2px
+        margin-left: 4px
+        fill: white
+        fill-rule: evenodd
+      .langs
+        position: relative
+        display: inline-block
+        &.js-open
+          ul
+            visibility: visible
+            opacity: 1
+        ul
+          position: absolute
+          top: 100%
+          left: 0
+          z-index: 1
+          visibility: hidden
+          overflow-x: hidden
+          overflow-y: auto
+          box-sizing: border-box
+          margin: 0
+          padding: 0
+          max-height: 120px
+          width: 100%
+          list-style: none
+          opacity: 0
+          transition: all .2s ease
+          li
+            display: block
+            color: white
+            text-align: left
+            text-transform: uppercase
+            line-height: 26px
+            opacity: .7
+            cursor: pointer
+            transition: all .2s ease
+            &:hover
+              opacity: 1
+      .title
+        position: relative
+        width: 40px
+        color: white
+        text-transform: uppercase
+        font: 14px / 36px $Helvetica-Regular
+        cursor: pointer
+        &:after
+          position: absolute
+          top: 5px
+          right: 2px
+          z-index: 1
+          display: inline-block
+          color: white
+          content: "\f107"
+          font: normal normal normal 20px / 1 FontAwesome
+          text-rendering: auto
+          -webkit-font-smoothing: antialiased
+          -moz-osx-font-smoothing: grayscale
+  .right-content
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    overflow-x: auto
+    overflow-y: hidden
+    box-sizing: border-box
+    padding: 70px 60px 15px
+    width: 470px
+    background-color: white
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.05)
+    h3
+      margin-bottom: 60px
+      color: $color-blue
+      text-align: center
+      font: 35px / 1.6 $Helvetica-Regular
+
+    .copir
+      margin-top: 170px
+      font: 15px / 2.4 $Helvetica-Regular
+      color: rgba(34, 32, 43, 0.8)
+      text-align: center
+

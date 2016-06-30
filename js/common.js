@@ -58,3 +58,20 @@ fixedSvg();
 function isOnPage(selector) {
   return ($(selector).length) ? $(selector) : false;
 }
+
+
+
+// lang
+//-----------------------------------------------------------------------------------
+$('.langs').on('click', '.title', function () {
+    var parent = $(this).closest('.langs');
+    if (!parent.hasClass('js-open')) {
+        parent.addClass('js-open');
+        $('.langs.js-open').not(parent).removeClass('js-open');
+    } else {
+        parent.removeClass('js-open');
+    }
+}).on('click', 'ul>li', function () {
+    var parent = $(this).closest('.langs');
+    parent.removeClass('js-open').find('.title').text($(this).text());
+});

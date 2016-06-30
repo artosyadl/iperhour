@@ -3,9 +3,6 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     sass: {
       development: {
-        options: {
-          noCache: true
-        },
         files: {
           "css/style.css": "dev/sass/style.sass"
         }
@@ -133,7 +130,7 @@ module.exports = function (grunt) {
         }
       },
       styles: {
-        files: ['css/plugins/*.css', 'dev/sass/**', 'dev/sass/*.sass'],
+        files: ['dev/sass/**', 'dev/sass/*.sass', 'css/plugins/*.css'],
         tasks: ['sass:development', 'postcss', 'concat:style', 'notify:watch'],
         options: {
           livereload: true,
