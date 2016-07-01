@@ -14,27 +14,46 @@
     box-sizing: border-box
     padding: 30px
     background: white url("../images/login/pic.jpg") no-repeat center / cover
+    @media (max-width: $screen-sm-max)
+      bottom: auto
+      right: 0
+      z-index: 1
+      padding: 15px
+      height: 50px
+      background: white
     .logo
+      position: relative
       display: inline-block
       width: 140px
       height: 30px
       text-decoration: none
       fill: white
+      @media (max-width: $screen-sm-max)
+        fill: $color-blue
+        width: 83px
+        height: 18px
     .lang-select
       @extend %clear-fix
+      position: relative
       display: inline-block
       float: right
       line-height: 36px
+      @media (max-width: $screen-sm-max)
+        margin-top: -8px
       .name
         display: inline-block
         color: white
         font: 14px / 36px $Helvetica-Regular
+        @media (max-width: $screen-sm-max)
+          color: $color-black
       .icon
         margin-right: 4px
         margin-bottom: -2px
         margin-left: 4px
         fill: white
         fill-rule: evenodd
+        @media (max-width: $screen-sm-max)
+          fill: $color-black
       .langs
         position: relative
         display: inline-block
@@ -58,6 +77,8 @@
           list-style: none
           opacity: 0
           transition: all .2s ease
+          @media (max-width: $screen-sm-max)
+            background-color: white
           li
             display: block
             color: white
@@ -67,6 +88,8 @@
             opacity: .7
             cursor: pointer
             transition: all .2s ease
+            @media (max-width: $screen-sm-max)
+              color: $color-black
             &:hover
               opacity: 1
       .title
@@ -76,6 +99,8 @@
         text-transform: uppercase
         font: 14px / 36px $Helvetica-Regular
         cursor: pointer
+        @media (max-width: $screen-sm-max)
+          color: $color-black
         &:after
           position: absolute
           top: 5px
@@ -88,27 +113,152 @@
           text-rendering: auto
           -webkit-font-smoothing: antialiased
           -moz-osx-font-smoothing: grayscale
+          @media (max-width: $screen-sm-max)
+            color: $color-black
+
   .right-content
     position: absolute
     top: 0
     right: 0
     bottom: 0
-    overflow-x: auto
-    overflow-y: hidden
+    overflow-x: hidden
+    overflow-y: auto
     box-sizing: border-box
     padding: 70px 60px 15px
     width: 470px
     background-color: white
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.05)
+    @media (max-width: $screen-sm-max)
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+      width: 100%
+      max-width: 380px
+      padding: 60px 15px 15px
+      display: block
+      margin: 0 auto
+      right: auto
+      position: static
     h3
       margin-bottom: 60px
       color: $color-blue
       text-align: center
       font: 35px / 1.6 $Helvetica-Regular
+      @media (max-width: $screen-sm-max)
+        margin-bottom: 30px
 
     .copir
-      margin-top: 170px
-      font: 15px / 2.4 $Helvetica-Regular
+      margin-top: 130px
       color: rgba(34, 32, 43, 0.8)
       text-align: center
+      font: 15px / 2.4 $Helvetica-Regular
+      @media (max-width: $screen-sm-max)
+        margin-top: 20px
+    .register-link
+      margin-top: 75px
+      color: #22202b
+      text-align: center
+      font: 15px / 2.4 $Helvetica-Regular
+      @media (max-width: $screen-sm-max)
+        margin-top: -15px
+      a
+        color: #01a7e3
+        text-transform: uppercase
+        font: 15px / 2.4 $Helvetica-Bold
+        &:hover
+          text-decoration: none
+    .or-block
+      position: relative
+      display: block
+      margin: 60px auto
+      padding: 0 20px
+      width: 22px
+      color: #01a7e3
+      text-align: center
+      font: 15px / 2.4 $Helvetica-Regular
+      @media (max-width: $screen-sm-max)
+        margin: 25px auto
+      &:before
+        position: absolute
+        top: 16px
+        left: -20px
+        width: 25px
+        height: 1px
+        background-color: #01a7e3
+        content: ''
+      &:after
+        position: absolute
+        top: 16px
+        right: -20px
+        width: 25px
+        height: 1px
+        background-color: #01a7e3
+        content: ''
+    .el-btn-link
+      &.facebook
+        margin-bottom: 30px
+        border: 1px solid #3b5998
+        background-color: #3b5998
+        color: white
+        @media (max-width: $screen-sm-max)
+          width: 48%
+        span
+          @media (max-width: $screen-sm-max)
+            display: none
+        i
+          font-size: 24px
+          &:before
+            float: left
+            margin-right: 4px
+            margin-bottom: -6px
+        &:hover
+          background: none
+          color: #3b5998
+      &.google
+        border: 1px solid #dd4b39
+        background-color: #dd4b39
+        color: white
+        @media (max-width: $screen-sm-max)
+          width: 48%
+          float: right
+        span
+          @media (max-width: $screen-sm-max)
+            display: none
+        i
+          font-size: 24px
+          &:before
+            float: left
+            margin-right: 4px
+            margin-bottom: -6px
+        &:hover
+          background: none
+          color: #dd4b39
+    form
+      .el-input_wrap
+        margin-bottom: 30px
+        @media (max-width: $screen-sm-max)
+          margin-bottom: 20px
+        input.error
+          border: 1px solid red
+      label.error
+        display: none !important
+      .icon-2
+        fill: #01a7e3
+        fill-rule: evenodd
+      .checkbox-wraper
+        @extend %clear-fix
+      .forgot
+        float: right
+        color: #01a7e3
+        font: 15px / 1.8 $Helvetica-Regular
+        &:hover
+          text-decoration: none
+      .button_wrap
+        margin-top: 30px
+        @media (max-width: $screen-sm-max)
+          margin-top: 20px
+      button
+        text-transform: uppercase
+
+
+
+
 

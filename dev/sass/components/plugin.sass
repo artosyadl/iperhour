@@ -1,2 +1,41 @@
 // plugin
 //-----------------------------------------------------------------------------------
+
+
+
+// checkbox
+//-----------------------------------------------------------------------------------
+
+label
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+input[type=checkbox].css-checkbox
+  position: absolute
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  margin: -1px
+  padding: 0
+  width: 1px
+  height: 1px
+  border: 0
+
+input[type=checkbox].css-checkbox + label.css-label
+  display: inline-block
+  padding-left: 25px
+  height: 16px
+  background-position: 0 0
+  background-repeat: no-repeat
+  vertical-align: middle
+  font: 15px / 20px $Helvetica-Regular
+  cursor: pointer
+
+input[type=checkbox].css-checkbox:checked + label.css-label
+  background-position: 0 -16px
+
+.css-label
+  background-image: url(../images/checkboxes.png)
