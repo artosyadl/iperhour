@@ -29,7 +29,7 @@
       text-decoration: none
       fill: white
       @media (max-width: $screen-sm-max)
-        fill: $color-blue
+        fill: rgba(0, 0, 0, 0.6)
         width: 83px
         height: 18px
     .lang-select
@@ -45,7 +45,7 @@
         color: white
         font: 14px / 36px $Helvetica-Regular
         @media (max-width: $screen-sm-max)
-          color: $color-black
+          color: rgba(0, 0, 0, 0.6)
       .icon
         margin-right: 4px
         margin-bottom: -2px
@@ -53,7 +53,7 @@
         fill: white
         fill-rule: evenodd
         @media (max-width: $screen-sm-max)
-          fill: $color-black
+          fill: rgba(0, 0, 0, 0.6)
       .langs
         position: relative
         display: inline-block
@@ -89,7 +89,7 @@
             cursor: pointer
             transition: all .2s ease
             @media (max-width: $screen-sm-max)
-              color: $color-black
+              color: rgba(0, 0, 0, 0.6)
             &:hover
               opacity: 1
       .title
@@ -100,7 +100,7 @@
         font: 14px / 36px $Helvetica-Regular
         cursor: pointer
         @media (max-width: $screen-sm-max)
-          color: $color-black
+          color: rgba(0, 0, 0, 0.6)
         &:after
           position: absolute
           top: 5px
@@ -114,7 +114,7 @@
           -webkit-font-smoothing: antialiased
           -moz-osx-font-smoothing: grayscale
           @media (max-width: $screen-sm-max)
-            color: $color-black
+            color: rgba(0, 0, 0, 0.6)
 
   .right-content
     position: absolute
@@ -144,6 +144,8 @@
       font: 35px / 1.6 $Helvetica-Regular
       @media (max-width: $screen-sm-max)
         margin-bottom: 30px
+        font: 25px / 1.6 $Helvetica-Regular
+        color: rgba(0, 0, 0, 0.6)
 
     .copir
       margin-top: 130px
@@ -201,10 +203,15 @@
         @media (max-width: $screen-sm-max)
           width: 48%
         span
+          &.mob-show
+            @media (max-width: $screen-sm-max)
+              display: inline-block
           @media (max-width: $screen-sm-max)
             display: none
         i
           font-size: 24px
+          @media (max-width: $screen-sm-max)
+            display: none
           &:before
             float: left
             margin-right: 4px
@@ -220,10 +227,15 @@
           width: 48%
           float: right
         span
+          &.mob-show
+            @media (max-width: $screen-sm-max)
+              display: inline-block
           @media (max-width: $screen-sm-max)
             display: none
         i
           font-size: 24px
+          @media (max-width: $screen-sm-max)
+            display: none
           &:before
             float: left
             margin-right: 4px
@@ -243,12 +255,16 @@
       .icon-2
         fill: #01a7e3
         fill-rule: evenodd
+        @media (max-width: $screen-sm-max)
+          fill: rgba(0, 0, 0, 0.6)
       .checkbox-wraper
         @extend %clear-fix
       .forgot
         float: right
         color: #01a7e3
         font: 15px / 1.8 $Helvetica-Regular
+        @media (max-width: $screen-sm-max)
+          color: rgba(0, 0, 0, 0.6)
         &:hover
           text-decoration: none
       .button_wrap
